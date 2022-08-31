@@ -30,7 +30,7 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
     name: "variable",
-    pattern: "query/{name}/{*values}",
+    pattern: "query/{name}/{*values}", //Asterisk creates variable length URL
     defaults: new { controller = "Home", action = "Process" });
 
 app.MapControllerRoute(

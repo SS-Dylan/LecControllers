@@ -51,6 +51,21 @@ public class HomeController : Controller
         return Content($"results = {result} item string = {itemStr}");
     }
 
+    /// <summary>
+    /// Action methods implicitly handle GET requests
+    /// </summary>
+
+    public IActionResult InputAgeForm()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult FormProcessor(int age)
+    {
+        return Content($"Age = {age}");
+    }
+
     #endregion
 
     public IActionResult Privacy()
